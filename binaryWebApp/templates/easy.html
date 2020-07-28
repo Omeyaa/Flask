@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Binary Easy Mode</title>
+<style type="text/css">
+    .easy{
+        width: 500px;
+        border: 1px solid;
+        padding: 70px;
+        text-align: center;
+        position: absolute;
+        top:150px;
+        left: 350px;
+    }
+
+    
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="easy">
+<h1>Binary Challenge Easy Mode</h1>
+<p>{{ question }}</p>
+<form action="" method='GET'>
+    <input type="text" name='answer' id='answer'> 
+    <br>
+    <input type="submit" value="Submit">
+    <input type="submit" value="Next">
+    
+</form>
+</div>
+{% endblock %}

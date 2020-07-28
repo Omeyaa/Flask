@@ -1,0 +1,114 @@
+{% extends 'base.html'%}
+
+{% block title %}
+<title>Home</title>
+<style type="text/css">
+        body{
+            margin: 0;
+        }
+
+        .nav-bar li {
+            display: inline-block;
+            padding-left: 40px;
+            position: relative;
+            right: 150px;
+            top:10px;
+        }
+        .nav-bar{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            width: 100%;
+            background-color:#21262b;
+            height: 70px;
+        }
+
+        .nav-bar a{
+            background-color: dodgerblue;
+            text-decoration: none;
+            color: white;
+            font-size: 19px;
+            position: relative;
+            top: -63px;
+            left: 1000px;
+            border-radius: 3px;
+            padding: 5px 17px;
+        }
+        .nav-bar a:hover{
+            background-color: #1c6dd6;
+        }
+
+        .nav-bar h1{
+            padding-left: 50px;
+            color: white;
+        }
+
+        .score li{
+            display: inline-block;
+            padding: 0px 40px;
+        }
+
+         .easy{
+            border: 1px solid;
+            padding: 10px 80px;
+        }
+
+        .medium{
+            border: 1px solid;
+            padding: 10px 80px;
+        }
+
+        .hard{
+            border: 1px solid;
+            padding: 10px 80px;
+        }
+
+        .score{
+            position: relative;
+            top: 200px;
+            text-align: center;
+        }
+
+        p{
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+
+</style>
+{% endblock%}
+
+{% block body %}
+<div class="nav-bar">
+    <h1>Binary Challenge</h1>
+    <ul>
+        <li><a href="easy">Easy</a></li>
+        <li><a href="medium"> Medium</a></li>
+        <li><a href="hard"> Hard</a></li>
+    </ul>
+</div>
+
+<div class="score">
+    <li>
+        <div class="easy">
+            <h1>EASY</h1>
+            <p>{{ easyS }}</p>
+        </div>
+    </li>
+    <li>
+        <div class="medium">
+            <h1>MEDIUM</h1>
+            <p>{{ mediumS }}</p>
+        </div>
+    </li>
+    <li>
+        <div class="hard">
+            <h1>HARD</h1>
+            <p>{{ hardS }}</p>
+        </div>
+    </li>
+</div>
+
+{% endblock%}

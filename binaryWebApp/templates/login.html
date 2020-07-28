@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Login</title>
+<style type="text/css">
+    body{
+        background-image: url(../static/image/ai.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position-y: 70px;
+    }
+ .form{
+     position: relative;
+     left: 700px;
+     top: 70px;
+     width: 300px;
+     height: 300px;
+     padding: 70px;
+     border: 1px solid gray;
+     text-align: center;
+     
+ }
+
+ h1{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ input[type=text],[type=password]{
+     padding: 10px 15px;
+     width: 265px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ input[type=submit]{
+     padding: 12px 0px;
+     width: 298px;
+     background-color:  dodgerblue;
+     border: none;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 15px;
+     color: white;
+ }
+ input[type=submit]:hover{
+     background-color: #1c6dd6;
+ }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="form">
+<h1>Login</h1>
+<br>
+<form method="post">
+    <input type="text" name="uname" placeholder="Username"><br><br>
+    <input type="password" name="pass" placeholder="Password"><br>
+    <br>
+    <br>
+    <input type="submit" value="Login"><br><br>
+    <input type="submit" value="Forgot Password?">
+</form>
+</div>
+{% endblock%}

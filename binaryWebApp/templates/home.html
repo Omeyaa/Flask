@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Home</title>
+    <style type="text/css">
+        body{
+            margin: 0px 0px;
+        }
+
+        .ul li{
+            display: inline-block;
+            padding: 10px;
+        }
+        .nav-bar{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            width: 100%;
+            background-color:#21262b;
+            height: 70px;
+        }
+
+        a{
+            background-color: dodgerblue;
+            text-decoration: none;
+            color: white;
+            font-size: 19px;
+            position: relative;
+            top: -63px;
+            left: 1000px;
+            border-radius: 3px;
+            padding: 5px 17px;
+        }
+        a:hover{
+            background-color: #1c6dd6;
+        }
+
+        h1{
+            padding-left: 50px;
+            color: white;
+        }
+
+        .content{
+            position: relative;
+            top:150px;
+            left:800px;
+            width: 400px;
+            padding :20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .img{
+            position: absolute;
+            top: 80px;
+            left: 50px;
+            width: 800px;
+        }
+        p{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:25px;
+        }
+
+        @media screen and (orientation: portrait) {
+            body{
+                height: 100%;
+            }
+
+
+            .nav-bar{
+                width: 100%;
+                font-size: 15px;
+            }
+
+            .nav-bar .ul{
+                display: none;
+            }
+
+            .img{
+                width: 500px;
+                height: 300px;
+                position: relative;
+                left: 10px;
+                top: 110px;
+            }
+
+            img{
+                width: 50px;
+                height: 50px;
+            }
+
+            .content{
+                width: 400px;
+                position: relative;
+                left: 60px;
+                
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="nav-bar">
+        <h1>Binary Challenge</h1>
+        <ul class="ul">
+            <li><a href="login">Login</a></li>
+            <li><a href="create_account">Create Account</a></li>
+        </ul>
+
+    </div>
+    <img class="img" src="static/image/ai.png">
+    <div class="content">
+        <p>Binary is a base-2 number system invented by Gottfried Leibniz that is made up of only two numbers: 0 and 1. This number system is the basis for all binary code, which is used to write data such as the computer processor instructions used every day.</p>
+    </div>
+    <div class="footer">
+    </div>
+{% endblock %}
